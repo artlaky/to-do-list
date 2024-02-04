@@ -1,6 +1,7 @@
 # === === === ====== === === ====== === === ====== === === ====== === === ====== === === ====== === === ====== === === ====== === === ===
 #                                                       To do list program
 # Descripion: task maneger for ubuntu.                                                      programer: Lucas Queiroz.
+# Todo: Adicionar sistema de categoria popr dia e hora.
 # === === === ====== === === ====== === === ====== === === ====== === === ====== === === ====== === === ====== === === ====== === === ===
 
 # Imports
@@ -44,14 +45,15 @@ class TaskManager:
 
 
 def perser_argmumets():
+    # Todo: Adicionar novas funcionalidades nisso.
     parser = argparse.ArgumentParser(prog='taskM', description='A taks maneger')
     parser.add_argument(
-        '--add',
+        '-add',
         nargs=2,
         metavar=('[DESCRIPTION]', ',[DATE]'),
         help='Add a new task.',
     )
-    parser.add_argument('--list', action='store_true', help='list all tasks.')
+    parser.add_argument('-list', action='store_true', help='list all tasks.')
     return parser.parse_args()
 
 
